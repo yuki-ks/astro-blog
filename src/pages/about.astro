@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Header from '../components/Header.astro';
 
 const pageTitle = 'About Me';
 const identity = {
@@ -33,8 +34,7 @@ const textCase = 'uppercase';
 </head>
 
 <body>
-  <a href="/">Home</a>
-  <a href="/about">About</a>
+  <Header />
   <h1>This is about page</h1>
 
   <h1>{pageTitle}</h1>
@@ -51,4 +51,7 @@ const textCase = 'uppercase';
   <ul>
     {skills.map((skill) => <li class="skill">{skill}</li>)}
   </ul>
+  <script>
+    import "../scripts/menu.js"
+  </script>
 </body>
